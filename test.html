@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		.div1 {
+			width: 100px;
+			height: 100px;
+			background-color: red;
+		}
+	</style>
+	<script type="text/javascript" src="leo.js"></script>
+	<script type="text/javascript">
+			// L(function () {
+			// 	console.log(L('li'));
+			// 	console.log('dddd');
+			// })
+	</script>
+</head>
+
+<body>
+	<ul class="items">
+		<li id="id1" class="box1 aabb cc">1<p>ppp</p>
+		</li>
+		<li id="id2" class="box2 aa cc">2</li>
+		<li id="id3" class="box3">3</li>
+	</ul>
+	<p class="box1"></p>
+	<span>sss</span>
+	<div class="div1">
+	</div>
+	<input type="" name="" id="" value="default1" />
+	<input type="" name="" id="" value="default2" />
+	<button type="button">button</button>
+
+	<button type="button" class="btn">button1</button>
+	<button type="button" class="btn">button2</button>
+	<ul id="copy">
+		<li class="li">1</li>
+		<li class="li">2</li>
+	</ul>
+	<button class="copy">shallow copy</button>
+	<button class="copy">deep copy</button>
+
+	<script type="text/javascript">
+		const { log } = console;
+
+		L('.li').on('click', () => {
+			log('li');
+		});
+		
+		L('.copy').eq(0).on('click', () => {
+			let newLis = L('.li').clone(false);
+			L('#copy').append(newLis);
+			// newLis.appendTo(L('#copy'))
+		});
+
+		L('.copy').eq(1).on('click', () => {
+				let newLis = L('.li').clone(true);
+				L('#copy').append(newLis);
+				// newLis.appendTo(L('#copy'))
+			});
+		// log(L(function () {}))
+
+		// log(L(null))
+		// log(L(undefined))
+		// log(L(0))
+		// log(L(false))
+		// log(L())
+
+		// // console.log(L(`<div><p>1</p></div><div><p>2</p></div>`));
+		//  console.log(L(`   <div><p>1</p></div><div><p>2</p></div>    `));
+
+		// console.log(L('li'));
+		// var arr = [1, 2, 3];
+		// var obj = {0: 'dd', 1: 'ss', 2: 'ee', length: 3};
+		// console.log(L(obj));
+		// console.log(L(arr));
+
+		// log(L(123))
+		// log(L('div'))
+
+		// var ret = L('li');
+		// log(ret);
+		// var ret2 = L('li').toArray();
+		// log(ret2);
+
+		// log(L('li').get());
+		// log(L('li').get(1));
+		// log(L('li').get(-2));
+
+		// log(L('li').first());
+		// log(L('li').last());
+
+		var arr = [1, 2, 3];
+		var obj = { 0: 'dd', 1: 'ss', 2: 'ee', length: 3 };
+
+		// L.each(arr, function (index, value) {
+		// 	// if (index === 1) return false;
+		// 	log(this);
+		// 	log(index,value);
+		// })
+
+		// L.each(obj, function (key, value) {
+		// 	// if (key === 1) return false;
+		// 	log(this);
+		// 	log(key,value);
+		// })
+
+		// L(arr).each(function (index, value) {
+		// 	log(index, value)
+		// })
+
+		// var ret = L.map(obj, function (value, key) {
+		// 	log(key, value);
+		// 	return `${ key }: ${ value }`;
+		// })
+		// log(ret);
+
+		// log(document.querySelectorAll('.box'));
+		L('button').get(0).onclick = function () {
+			// L('li').empty();
+			// log(L('li').empty());
+
+			// L('li').remove();
+			// log(L('li').remove());
+
+			// L('li').remove('.box1');
+
+			// log(L('li').html());
+			// L('li').html('<p>ppp</p>')
+
+			// log(L('li').text());
+			// L('li').text('<span>sss</span>');
+
+			// L('span').appendTo('li');
+			// log(L('span').appendTo('.box2'));
+
+			// L('span').prependTo('.items');
+			// log(L('span').prependTo('.box2'));
+
+			// log(L('li').append('<p>kkkk</p>')) 
+
+			// L('span').insertBefore('.box3');
+
+			// L('span').insertAfter('.box3')
+
+			// L('span').replaceAll('li');
+			// log(L('li').attr('name', 'leo'));
+			// L('li').attr({
+			// 	test: 'test',
+			// 	name: 'leo'
+			// });
+			// log(L('li').prop({
+			// 	test: 'test',
+			// 	name: 'leo'
+			// }));
+
+			// L('.div1').css('height', '50px');
+			// log(L('.div1').css('height'));
+			// L('.div1').css({
+			// 	'background-color': 'blue',
+			// 	'width': '50px'
+			// });
+
+			// log(L('input').val());
+			log(L('input').val('leo'));
+		}
+
+			// log(L('li').hasClass('aabb'));
+			// log(L('li').addClass('aa bb'));
+			// log(L('li').removeClass('cc'));
+			// log(L('li').toggleClass('aa'));
+			// L('li').toggleClass();
+
+			// let c1 = function () {
+			// 			alert('click1');
+			// 		}
+			// L('.btn').on('click', c1);
+			// //no cover the previous one
+			// L('.btn').on('click', function () {
+			// 	alert('click2');
+			// });
+
+			// L('.btn').on('mouseenter', function () {
+			// 	alert('mouseenter');
+			// });
+			// L('.btn').on('mouseleave', function () {
+			// 	alert('mouseleave');
+			// });
+
+			// L('.btn').off();
+			// L('.btn').off('click');
+			// L('.btn').off('click', c1)
+
+	</script>
+</body>
+
+</html>
